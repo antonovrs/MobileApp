@@ -1,0 +1,9 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <item name="ic_state_park" type="drawable">@drawable/im_statepark</item>
+    <item name="ic_event" type="drawable">@drawable/im_event</item>
+    <item name="ic_task" type="drawable">@drawable/im_task</item>
+    <item name="ic_fuel" type="drawable">@drawable/im_fuel</item>
+    <item name="ic_employees" type="drawable">@drawable/im_employ</item>
+    <item name="ic_admin" type="drawable">@drawable/im_admin</item>
+    <item name="ic_exit" type="drawable">@drawable/im_exit</item>
+</resources>

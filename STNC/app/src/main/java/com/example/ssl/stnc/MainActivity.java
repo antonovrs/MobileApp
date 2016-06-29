@@ -1,0 +1,133 @@
+package com.example.ssl.stnc;
+
+import android.app.FragmentTransaction;
+import android.app.Fragment;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.view.View;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
+
+import com.example.ssl.stnc.fragments.FragmentAdmin;
+import com.example.ssl.stnc.fragments.FragmentEmployees;
+import com.example.ssl.stnc.fragments.FragmentEvent;
+import com.example.ssl.stnc.fragments.FragmentFuel;
+import com.example.ssl.stnc.fragments.FragmentStatePark;
+import com.example.ssl.stnc.fragments.FragmentTask;
+
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
+
+    FragmentTask ftask;
+    FragmentStatePark fstate_park;
+    FragmentFuel ffuel;
+    FragmentEvent fevent;
+    FragmentEmployees femloyees;
+    FragmentAdmin fadmin;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        ftask = new FragmentTask();
+        fstate_park = new FragmentStatePark();
+        ffuel = new FragmentFuel();
+        fevent = new FragmentEvent();
+        femloyees = new FragmentEmployees();
+        fadmin = new FragmentAdmin();
+
+
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        FragmentTransaction ftrans = getFragmentManager().beginTransaction();
+        if (id == R.id.state_park) {
+            ftrans.replace(R.id.container, fstate_park);
+        } else if (id == R.id.event) {
+            ftrans.replace(R.id.container, fevent);
+        } else if (id == R.id.task) {
+            ftrans.replace(R.id.container, ftask);
+        } else if (id == R.id.fuel) {
+            ftrans.replace(R.id.container, ffuel);
+        } else if (id == R.id.employees) {
+            ftrans.replace(R.id.container, femloyees);
+        } else if (id == R.id.admin) {
+            ftrans.replace(R.id.container, fadmin);
+        } else if (id == R.id.exit) {
+
+        }ftrans.commit();
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+}
