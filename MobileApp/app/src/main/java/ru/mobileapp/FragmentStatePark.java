@@ -1,11 +1,15 @@
 package ru.mobileapp;
 
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import org.eazegraph.lib.charts.PieChart;
+import org.eazegraph.lib.models.PieModel;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -51,18 +55,33 @@ public class FragmentStatePark extends android.app.Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_state_park, container, false);
+        View rootView =
+                inflater.inflate(R.layout.fragment_state_park, container, false);
+        PieChart mPieChart = (PieChart) rootView.findViewById(R.id.piechart);
+
+        mPieChart.addPieSlice(new PieModel("Свободно", 15, Color.parseColor("#FE6DA8")));
+        mPieChart.addPieSlice(new PieModel("Занято", 25, Color.parseColor("#56B7F1")));
+        mPieChart.addPieSlice(new PieModel("В ремонте", 35, Color.parseColor("#CDA67F")));
+
+
+        mPieChart.startAnimation();
+
+        return rootView;
+
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
