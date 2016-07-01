@@ -1,75 +1,117 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context="ru.mobileapp.FragmentEvent">
+
+<!-- TODO: Update blank fragment layout -->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:text="Состояние парка"
+    android:id="@+id/textView6"
+    android:layout_gravity="center"
+    android:layout_marginTop="5dp" />
+
+<LinearLayout
+    android:id="@+id/layout1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.ssl.stnc.fragments.FragmentStatePark">
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal">
+    <org.eazegraph.lib.charts.PieChart
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/piechart"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:padding="8dp"
+        app:egLegendTextSize="18sp"
+        app:egUsePieRotation="true"
+        app:egValueTextSize="36sp"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"/>
 
-    <!-- TODO: Update blank fragment layout -->
-
-    <RelativeLayout
-        android:layout_width="384dp"
-        android:layout_height="260dp"
-        android:layout_gravity="center_horizontal|top">
-
-        <org.eazegraph.lib.charts.PieChart
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/piechart"
-            android:layout_width="174dp"
-            android:layout_height="215dp"
-            android:padding="8dp"
-            app:egLegendTextSize="18sp"
-            app:egUsePieRotation="true"
-            app:egValueTextSize="36sp"
-            android:layout_gravity="center_horizontal|bottom"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal|bottom">
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Свободно"
-            android:id="@+id/idSPlegendFree"
-            android:layout_marginTop="37dp"
-            android:layout_alignTop="@+id/piechart"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="60dp"
-            android:layout_marginEnd="60dp" />
+            android:layout_marginTop="10dp">
+            <ImageView
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:background="#FE6DA8"
+                android:id="@+id/imageView3"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/idSPlegendFree"
+                android:layout_marginLeft="15dp"
+                android:text="Свободно"
+                android:layout_marginRight="15dp"/>
+        </LinearLayout>
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Занято"
-            android:id="@+id/idSPlegendBusy"
-            android:layout_below="@+id/idSPlegendFree"
-            android:layout_alignLeft="@+id/idSPlegendFree"
-            android:layout_alignStart="@+id/idSPlegendFree"
-            android:layout_marginTop="15dp" />
+            android:layout_marginTop="15dp">
+            <ImageView
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:background="#56B7F1"
+                android:id="@+id/imageView2"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Занято"
+                android:id="@+id/idSPlegendBusy"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+        </LinearLayout>
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="В ремонте"
-            android:id="@+id/idSPlegendRepairs"
-            android:layout_below="@+id/idSPlegendBusy"
-            android:layout_alignLeft="@+id/idSPlegendBusy"
-            android:layout_alignStart="@+id/idSPlegendBusy"
-            android:layout_marginTop="15dp" />
+            android:layout_marginTop="15dp">
+            <ImageView
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:background="#CDA67F"
+                android:id="@+id/imageView4"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="В ремонте"
+                android:id="@+id/idSPlegendRepairs"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:id="@+id/image"
+            android:layout_alignBottom="@+id/idSPlegendRepairs"
+            android:layout_alignLeft="@+id/imageView2"
+            android:layout_alignStart="@+id/imageView2" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Состояние парка"
-            android:id="@+id/textView6"
-            android:layout_gravity="left|center_vertical"
-            android:layout_above="@+id/piechart"
-            android:layout_centerHorizontal="true" />
-
-    </RelativeLayout>
-
-</FrameLayout>
+    </LinearLayout>
+</LinearLayout>
