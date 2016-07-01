@@ -21,6 +21,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+
         <org.eazegraph.lib.charts.PieChart
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/piechart"
@@ -30,14 +31,15 @@
             app:egLegendTextSize="18sp"
             app:egUsePieRotation="true"
             app:egValueTextSize="36sp"
-            android:layout_below="@+id/textView6"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_vertical"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:orientation="vertical"
-            android:layout_gravity="center_horizontal|bottom">
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="20dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -51,7 +53,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:id="@+id/idSPlegendDone"
+                    android:id="@+id/idTlegendDone"
                     android:layout_marginLeft="15dp"
                     android:text="Выполнено"
                     android:layout_marginRight="15dp"/>
@@ -72,7 +74,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="В работе"
-                    android:id="@+id/idSPlegendInWork"
+                    android:id="@+id/idTlegendInWork"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"/>
             </LinearLayout>
@@ -92,7 +94,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Не выполнено"
-                    android:id="@+id/idSPlegendNotDone"
+                    android:id="@+id/idTlegendNotDone"
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="15dp" />
             </LinearLayout>
@@ -111,20 +113,10 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Создано"
-                    android:id="@+id/idSPlegendCreate"
+                    android:id="@+id/idTlegendCreate"
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="15dp" />
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-        <ImageView
-            android:layout_width="30px"
-            android:layout_height="30px"
-            android:id="@+id/image" />
-
     </LinearLayout>
 </LinearLayout>

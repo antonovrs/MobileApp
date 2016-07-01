@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:id="@+id/idSPlegendFree"
+                    android:id="@+id/idElegendEvent1"
                     android:layout_marginLeft="15dp"
                     android:text="Отсутствие связи"
                     android:layout_marginRight="15dp"/>
@@ -71,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Выход за пределы маршрута"
-                    android:id="@+id/idSPlegendBusy"
+                    android:id="@+id/idElegendEvent2"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"/>
 
@@ -92,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Занижение скорости"
-                    android:id="@+id/idSPlegendRepairs"
+                    android:id="@+id/idElegendEvent3"
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="15dp" />
             </LinearLayout>
@@ -131,9 +131,6 @@
                     android:layout_height="30px"
                     android:background="#FE6DA8"
                     android:id="@+id/imageView7"
-                    android:layout_alignTop="@+id/idSPlegendFree1"
-                    android:layout_toLeftOf="@+id/idSPlegendFree1"
-                    android:layout_toStartOf="@+id/idSPlegendFree1"
                     android:layout_marginTop="15dp"/>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -145,19 +142,13 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="А 013 АА 64"
-                        android:id="@+id/idSPlegendFree1"
-                        android:layout_alignTop="@+id/piechart1"
-                        android:layout_toRightOf="@+id/piechart1"
-                        android:layout_toEndOf="@+id/piechart1" />
+                        android:id="@+id/idElegendObject1" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Сергей Петров"
-                        android:id="@+id/textView"
-                        android:layout_below="@+id/idSPlegendFree1"
-                        android:layout_alignLeft="@+id/idSPlegendFree1"
-                        android:layout_alignStart="@+id/idSPlegendFree1" />
+                        android:id="@+id/idElegendObject1Name" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -170,9 +161,6 @@
                     android:layout_height="30px"
                     android:background="#56B7F1"
                     android:id="@+id/imageView5"
-                    android:layout_alignTop="@+id/idSPlegendBusy1"
-                    android:layout_toLeftOf="@+id/idSPlegendFree1"
-                    android:layout_toStartOf="@+id/idSPlegendFree1"
                     android:layout_marginTop="15dp"/>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -184,19 +172,13 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="А 012 АА 64"
-                    android:id="@+id/idSPlegendBusy1"
-                    android:layout_centerVertical="true"
-                    android:layout_alignLeft="@+id/idSPlegendFree1"
-                    android:layout_alignStart="@+id/idSPlegendFree1" />
+                    android:id="@+id/idElegendObject2" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Иван Кузнецов"
-                    android:id="@+id/textView4"
-                    android:layout_below="@+id/idSPlegendBusy1"
-                    android:layout_alignLeft="@+id/idSPlegendBusy1"
-                    android:layout_alignStart="@+id/idSPlegendBusy1" />
+                    android:id="@+id/idElegendObject2Name"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -209,10 +191,6 @@
                     android:layout_height="30px"
                     android:background="#CDA67F"
                     android:id="@+id/imageView6"
-                    android:layout_alignTop="@+id/idSPlegendRepairs1"
-                    android:layout_toLeftOf="@+id/idSPlegendFree1"
-                    android:layout_alignLeft="@+id/imageView5"
-                    android:layout_alignStart="@+id/imageView5"
                     android:layout_marginTop="15dp"/>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -224,19 +202,13 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="А 014 АА 64"
-                    android:id="@+id/idSPlegendRepairs1"
-                    android:layout_below="@+id/idSPlegendBusy1"
-                    android:layout_alignLeft="@+id/textView8"
-                    android:layout_alignStart="@+id/textView8" />
+                    android:id="@+id/idElegendObject3" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Олег Иванов"
-                    android:id="@+id/textView8"
-                    android:layout_below="@+id/idSPlegendRepairs1"
-                    android:layout_alignLeft="@+id/textView4"
-                    android:layout_alignStart="@+id/textView4" />
+                    android:id="@+id/idElegendObject3Name" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
