@@ -1,16 +1,130 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ssl.stnc.fragments.FragmentTask">
+    android:orientation="vertical"
+    tools:context="ru.mobileapp.FragmentTask">
 
     <!-- TODO: Update blank fragment layout -->
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Задания"
-        android:id="@+id/textView7"
-        android:layout_gravity="center" />
-</FrameLayout>
+        android:id="@+id/textView6"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp" />
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <org.eazegraph.lib.charts.PieChart
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/piechart"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:padding="8dp"
+            app:egLegendTextSize="18sp"
+            app:egUsePieRotation="true"
+            app:egValueTextSize="36sp"
+            android:layout_below="@+id/textView6"
+            android:layout_marginLeft="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal|bottom">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:background="#00FF00"
+                    android:id="@+id/imageView3"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/idSPlegendDone"
+                    android:layout_marginLeft="15dp"
+                    android:text="Выполнено"
+                    android:layout_marginRight="15dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+                <ImageView
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:background="#FFFF00"
+                    android:id="@+id/imageView2"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="В работе"
+                    android:id="@+id/idSPlegendInWork"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+                <ImageView
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:background="#FF0000"
+                    android:id="@+id/imageView4"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Не выполнено"
+                    android:id="@+id/idSPlegendNotDone"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+                <ImageView
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:background="#BEBEBE"
+                    android:id="@+id/imageView5"
+                    android:layout_marginTop="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Создано"
+                    android:id="@+id/idSPlegendCreate"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:id="@+id/image" />
+
+    </LinearLayout>
+</LinearLayout>
