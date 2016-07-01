@@ -1,11 +1,15 @@
 package ru.mobileapp;
 
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import org.eazegraph.lib.charts.PieChart;
+import org.eazegraph.lib.models.PieModel;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,8 +65,25 @@ public class FragmentEvent extends android.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_event, container, false);
+        View rootView =
+                inflater.inflate(R.layout.fragment_event, container, false);
+        PieChart mPieChart = (PieChart) rootView.findViewById(R.id.piechart);
+
+        mPieChart.addPieSlice(new PieModel("Отсутствие связи", 15, Color.parseColor("#FE6DA8")));
+        mPieChart.addPieSlice(new PieModel("Выход за пределы маршрута", 25, Color.parseColor("#56B7F1")));
+        mPieChart.addPieSlice(new PieModel("Занижение скорости", 35, Color.parseColor("#CDA67F")));
+
+        mPieChart.startAnimation();
+
+        PieChart mPieChart1 = (PieChart) rootView.findViewById(R.id.piechart1);
+
+        mPieChart1.addPieSlice(new PieModel("А 013 АА 64", 15, Color.parseColor("#FE6DA8")));
+        mPieChart1.addPieSlice(new PieModel("А 012 АА 64", 25, Color.parseColor("#56B7F1")));
+        mPieChart1.addPieSlice(new PieModel("А 014 АА 64", 35, Color.parseColor("#CDA67F")));
+
+        mPieChart1.startAnimation();
+
+        return rootView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

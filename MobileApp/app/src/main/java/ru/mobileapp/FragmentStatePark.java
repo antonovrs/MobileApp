@@ -76,7 +76,6 @@ public class FragmentStatePark extends android.app.Fragment {
         mPieChart.addPieSlice(new PieModel("Занято", 25, Color.parseColor("#56B7F1")));
         mPieChart.addPieSlice(new PieModel("В ремонте", 35, Color.parseColor("#CDA67F")));
 
-
         mPieChart.startAnimation();
 
         return rootView;

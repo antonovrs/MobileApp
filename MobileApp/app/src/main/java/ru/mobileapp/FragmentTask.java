@@ -1,11 +1,15 @@
 package ru.mobileapp;
 
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import org.eazegraph.lib.charts.PieChart;
+import org.eazegraph.lib.models.PieModel;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,9 +64,18 @@ public class FragmentTask extends android.app.Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_task, container, false);
+                             Bundle savedInstanceState) {View rootView =
+            inflater.inflate(R.layout.fragment_task, container, false);
+        PieChart mPieChart = (PieChart) rootView.findViewById(R.id.piechart);
+
+        mPieChart.addPieSlice(new PieModel("Выполнено", 15, Color.parseColor("#00FF00")));
+        mPieChart.addPieSlice(new PieModel("В работе", 25, Color.parseColor("#FFFF00")));
+        mPieChart.addPieSlice(new PieModel("Не выполнено", 35, Color.parseColor("#FF0000")));
+        mPieChart.addPieSlice(new PieModel("Создано", 35, Color.parseColor("#BEBEBE")));
+
+        mPieChart.startAnimation();
+
+        return rootView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
