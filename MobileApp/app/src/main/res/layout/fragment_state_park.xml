@@ -156,7 +156,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                 android:id="@+id/autoCom112"
                 android:layout_marginLeft="10dp"
                 android:gravity="center"
-                android:background="#rrggbb"/>
+                android:background="@android:color/transparent"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -281,7 +281,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                 android:layout_height="40px"
                 android:id="@+id/autoCom222"
                 android:layout_marginLeft="10dp"
-                android:background="#rrggbb"
+                android:background="@android:color/transparent"
                 android:gravity="center"/>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -318,7 +318,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                 android:layout_height="40px"
                 android:id="@+id/autoCom232"
                 android:layout_marginLeft="10dp"
-                android:background="#rrggbb"
+                android:background="@android:color/transparent"
                 android:gravity="center"/>
         </LinearLayout>
         <TextView
@@ -405,7 +405,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                 android:layout_height="40px"
                 android:id="@+id/autoCom322"
                 android:layout_marginLeft="10dp"
-                android:background="#rrggbb"
+                android:background="@android:color/transparent"
                 android:gravity="center"
                 android:text="10"/>
             <LinearLayout
