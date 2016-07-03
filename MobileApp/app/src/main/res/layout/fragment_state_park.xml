@@ -129,7 +129,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:layout_width="70px"
                     android:layout_height="70px"
                     android:id="@+id/imageCom11"
-                    android:src="@drawable/ts_auto_icon"
+                    android:src="@drawable/ts_auto_ic"
                     android:layout_marginLeft="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -166,7 +166,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:layout_width="70px"
                     android:layout_height="70px"
                     android:id="@+id/imageCom12"
-                    android:src="@drawable/ts_big_truck_icon"
+                    android:src="@drawable/ts_big_truck_ic"
                     android:layout_marginLeft="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -217,7 +217,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:layout_width="70px"
                     android:layout_height="70px"
                     android:id="@+id/imageCom21"
-                    android:src="@drawable/ts_auto_icon"
+                    android:src="@drawable/ts_auto_ic"
                     android:layout_marginLeft="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -255,7 +255,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:layout_width="70px"
                     android:layout_height="70px"
                     android:id="@+id/imageCom22"
-                    android:src="@drawable/ts_big_truck_icon"
+                    android:src="@drawable/ts_big_truck_ic"
                     android:layout_marginLeft="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -292,7 +292,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:layout_width="70px"
                     android:layout_height="70px"
                     android:id="@+id/imageCom23"
-                    android:src="@drawable/ts_truck_icon"
+                    android:src="@drawable/ts_truck_ic"
                     android:layout_marginLeft="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -341,7 +341,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:layout_width="70px"
                     android:layout_height="70px"
                     android:id="@+id/imageCom31"
-                    android:src="@drawable/ts_auto_icon"
+                    android:src="@drawable/ts_auto_ic"
                     android:layout_marginLeft="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -379,7 +379,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:layout_width="70px"
                     android:layout_height="70px"
                     android:id="@+id/imageCom32"
-                    android:src="@drawable/ts_big_truck_icon"
+                    android:src="@drawable/ts_big_truck_ic"
                     android:layout_marginLeft="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -417,7 +417,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:layout_width="70px"
                     android:layout_height="70px"
                     android:id="@+id/imageCom33"
-                    android:src="@drawable/ts_truck_icon"
+                    android:src="@drawable/ts_truck_ic"
                     android:layout_marginLeft="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
