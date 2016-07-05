@@ -68,10 +68,10 @@ public class FragmentTask extends android.app.Fragment {
             inflater.inflate(R.layout.fragment_task, container, false);
         PieChart mPieChart = (PieChart) rootView.findViewById(R.id.piechart);
 
-        mPieChart.addPieSlice(new PieModel("Выполнено", 15, Color.parseColor("#00FF00")));
-        mPieChart.addPieSlice(new PieModel("В работе", 25, Color.parseColor("#FFFF00")));
-        mPieChart.addPieSlice(new PieModel("Не выполнено", 35, Color.parseColor("#FF0000")));
-        mPieChart.addPieSlice(new PieModel("Создано", 35, Color.parseColor("#BEBEBE")));
+        mPieChart.addPieSlice(new PieModel("Выполнено", 35, Color.parseColor("#4CAF50")));
+        mPieChart.addPieSlice(new PieModel("В работе", 17, Color.parseColor("#FFC107")));
+        mPieChart.addPieSlice(new PieModel("Не выполнено", 35, Color.parseColor("#D8562A")));
+        mPieChart.addPieSlice(new PieModel("Создано", 38, Color.parseColor("#888888")));
 
         mPieChart.startAnimation();
 

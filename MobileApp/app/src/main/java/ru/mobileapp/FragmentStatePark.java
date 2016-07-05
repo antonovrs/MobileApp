@@ -76,9 +76,9 @@ public class FragmentStatePark extends android.app.Fragment {
                 inflater.inflate(R.layout.fragment_state_park, container, false);
         PieChart mPieChart = (PieChart) rootView.findViewById(R.id.piechart);
 
-        mPieChart.addPieSlice(new PieModel("Свободно", 15, Color.parseColor("#FE6DA8")));
-        mPieChart.addPieSlice(new PieModel("Занято", 25, Color.parseColor("#56B7F1")));
-        mPieChart.addPieSlice(new PieModel("В ремонте", 35, Color.parseColor("#CDA67F")));
+        mPieChart.addPieSlice(new PieModel("Свободно", 15, Color.parseColor("#4CAF50")));
+        mPieChart.addPieSlice(new PieModel("Занято", 25, Color.parseColor("#FFC107")));
+        mPieChart.addPieSlice(new PieModel("В ремонте", 35, Color.parseColor("#D8562A")));
 
         mPieChart.startAnimation();
 

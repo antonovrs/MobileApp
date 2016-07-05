@@ -69,17 +69,17 @@ public class FragmentEvent extends android.app.Fragment {
                 inflater.inflate(R.layout.fragment_event, container, false);
         PieChart mPieChart = (PieChart) rootView.findViewById(R.id.piechart);
 
-        mPieChart.addPieSlice(new PieModel("Отсутствие связи", 15, Color.parseColor("#FE6DA8")));
-        mPieChart.addPieSlice(new PieModel("Выход за пределы маршрута", 25, Color.parseColor("#56B7F1")));
-        mPieChart.addPieSlice(new PieModel("Занижение скорости", 35, Color.parseColor("#CDA67F")));
+        mPieChart.addPieSlice(new PieModel("Отсутствие связи", 15, Color.parseColor("#4CAF50")));
+        mPieChart.addPieSlice(new PieModel("Выход за пределы маршрута", 25, Color.parseColor("#FFC107")));
+        mPieChart.addPieSlice(new PieModel("Занижение скорости", 35, Color.parseColor("#D8562A")));
 
         mPieChart.startAnimation();
 
         PieChart mPieChart1 = (PieChart) rootView.findViewById(R.id.piechart1);
 
-        mPieChart1.addPieSlice(new PieModel("А 013 АА 64", 15, Color.parseColor("#FE6DA8")));
-        mPieChart1.addPieSlice(new PieModel("А 012 АА 64", 25, Color.parseColor("#56B7F1")));
-        mPieChart1.addPieSlice(new PieModel("А 014 АА 64", 35, Color.parseColor("#CDA67F")));
+        mPieChart1.addPieSlice(new PieModel("А 013 АА 64", 15, Color.parseColor("#4CAF50")));
+        mPieChart1.addPieSlice(new PieModel("А 012 АА 64", 25, Color.parseColor("#FFC107")));
+        mPieChart1.addPieSlice(new PieModel("А 014 АА 64", 35, Color.parseColor("#D8562A")));
 
         mPieChart1.startAnimation();
 

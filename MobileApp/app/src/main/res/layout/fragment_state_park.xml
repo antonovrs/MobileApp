@@ -19,13 +19,14 @@ tools:context="ru.mobileapp.FragmentEvent">
     android:id="@+id/layout1"
     android:layout_width="match_parent"
     android:layout_height="0dp"
-    android:layout_weight="1"
-    android:orientation="horizontal">
+    android:layout_weight="0.80"
+    android:orientation="horizontal"
+    android:background="@android:drawable/dialog_holo_light_frame">
     <org.eazegraph.lib.charts.PieChart
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/piechart"
         android:layout_width="150dp"
-        android:layout_height="200dp"
+        android:layout_height="177dp"
         android:padding="8dp"
         app:egLegendTextSize="18sp"
         app:egUsePieRotation="true"
@@ -37,7 +38,7 @@ tools:context="ru.mobileapp.FragmentEvent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_gravity="center_horizontal|bottom">
         <LinearLayout
@@ -47,7 +48,7 @@ tools:context="ru.mobileapp.FragmentEvent">
             <ImageView
                 android:layout_width="30px"
                 android:layout_height="30px"
-                android:background="#FE6DA8"
+                android:background="@drawable/greeb_cirle"
                 android:id="@+id/imageView3"
                 android:layout_marginTop="5dp"/>
             <TextView
@@ -67,7 +68,7 @@ tools:context="ru.mobileapp.FragmentEvent">
             <ImageView
                 android:layout_width="30px"
                 android:layout_height="30px"
-                android:background="#56B7F1"
+                android:background="@drawable/yellow_circle"
                 android:id="@+id/imageView2"
                 android:layout_marginTop="5dp"/>
             <TextView
@@ -87,7 +88,7 @@ tools:context="ru.mobileapp.FragmentEvent">
             <ImageView
                 android:layout_width="30px"
                 android:layout_height="30px"
-                android:background="#CDA67F"
+                android:background="@drawable/red_circle"
                 android:id="@+id/imageView4"
                 android:layout_marginTop="5dp"/>
             <TextView
@@ -104,7 +105,8 @@ tools:context="ru.mobileapp.FragmentEvent">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:background="@android:drawable/dialog_holo_light_frame">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -140,7 +142,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:id="@+id/idSPlegendNumberAuto11"
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="13dp"
-                    android:textColor="#0000FF"
+                    android:textColor="@color/colorNumb"
                     android:textSize="10pt"/>
             </LinearLayout>
 
@@ -151,7 +153,8 @@ tools:context="ru.mobileapp.FragmentEvent">
                 android:layout_marginLeft="10dp"
                 android:text="15"
                 android:background="@drawable/greeb_cirle"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="#ffffff" />
 
             <TextView
                 android:layout_width="40px"
@@ -159,7 +162,8 @@ tools:context="ru.mobileapp.FragmentEvent">
                 android:id="@+id/autoCom112"
                 android:layout_marginLeft="10dp"
                 android:gravity="center"
-                android:background="@android:color/transparent"/>
+                android:background="@drawable/yellow_circle"
+                android:textColor="#ffffff" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -179,7 +183,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:id="@+id/idSPlegendNumberAuto12"
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="18dp"
-                    android:textColor="#0000FF"
+                    android:textColor="@color/colorNumb"
                     android:textSize="10pt"/>
             </LinearLayout>
             <TextView
@@ -189,15 +193,17 @@ tools:context="ru.mobileapp.FragmentEvent">
                 android:layout_marginLeft="10dp"
                 android:text="4"
                 android:background="@drawable/greeb_cirle"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="#ffffff" />
             <TextView
                 android:layout_width="40px"
                 android:layout_height="40px"
                 android:id="@+id/autoCom122"
                 android:layout_marginLeft="10dp"
                 android:text="1"
-                android:background="@drawable/red_circle"
-                android:gravity="center"/>
+                android:background="@drawable/yellow_circle"
+                android:gravity="center"
+                android:textColor="#ffffff" />
         </LinearLayout>
 
             <TextView
@@ -230,7 +236,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:id="@+id/idSPlegendNumberAuto21"
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="13dp"
-                    android:textColor="#0000FF"
+                    android:textColor="@color/colorNumb"
                     android:textSize="10pt"/>
             </LinearLayout>
             <TextView
@@ -240,15 +246,17 @@ tools:context="ru.mobileapp.FragmentEvent">
                 android:layout_marginLeft="10dp"
                 android:text="10"
                 android:background="@drawable/greeb_cirle"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="#ffffff" />
             <TextView
                 android:layout_width="40px"
                 android:layout_height="40px"
                 android:id="@+id/autoCom212"
                 android:layout_marginLeft="10dp"
                 android:text="5"
-                android:background="@drawable/red_circle"
-                android:gravity="center"/>
+                android:background="@drawable/yellow_circle"
+                android:gravity="center"
+                android:textColor="#ffffff" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -268,7 +276,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:id="@+id/idSPlegendNumberAuto22"
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="18dp"
-                    android:textColor="#0000FF"
+                    android:textColor="@color/colorNumb"
                     android:textSize="10pt"/>
             </LinearLayout>
             <TextView
@@ -278,14 +286,16 @@ tools:context="ru.mobileapp.FragmentEvent">
                 android:layout_marginLeft="10dp"
                 android:text="5"
                 android:background="@drawable/greeb_cirle"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="#ffffff" />
             <TextView
                 android:layout_width="40px"
                 android:layout_height="40px"
                 android:id="@+id/autoCom222"
                 android:layout_marginLeft="10dp"
-                android:background="@android:color/transparent"
-                android:gravity="center"/>
+                android:background="@drawable/yellow_circle"
+                android:gravity="center"
+                android:textColor="#ffffff" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -305,7 +315,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:id="@+id/idSPlegendNumberAuto23"
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="18dp"
-                    android:textColor="#0000FF"
+                    android:textColor="@color/colorNumb"
                     android:textSize="10pt"/>
             </LinearLayout>
             <TextView
@@ -315,14 +325,16 @@ tools:context="ru.mobileapp.FragmentEvent">
                 android:layout_marginLeft="10dp"
                 android:text="5"
                 android:background="@drawable/greeb_cirle"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="#ffffff" />
             <TextView
                 android:layout_width="40px"
                 android:layout_height="40px"
                 android:id="@+id/autoCom232"
                 android:layout_marginLeft="10dp"
-                android:background="@android:color/transparent"
-                android:gravity="center"/>
+                android:background="@drawable/yellow_circle"
+                android:gravity="center"
+                android:textColor="#ffffff" />
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -354,7 +366,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:id="@+id/idSPlegendNumberAuto31"
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="13dp"
-                    android:textColor="#0000FF"
+                    android:textColor="@color/colorNumb"
                     android:textSize="10pt"/>
             </LinearLayout>
             <TextView
@@ -364,15 +376,17 @@ tools:context="ru.mobileapp.FragmentEvent">
                 android:layout_marginLeft="10dp"
                 android:text="5"
                 android:background="@drawable/greeb_cirle"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="#ffffff" />
             <TextView
                 android:layout_width="40px"
                 android:layout_height="40px"
                 android:id="@+id/autoCom312"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/red_circle"
+                android:background="@drawable/yellow_circle"
                 android:gravity="center"
-                android:text="10"/>
+                android:text="10"
+                android:textColor="#ffffff" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -392,7 +406,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:id="@+id/idSPlegendNumberAuto32"
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="18dp"
-                    android:textColor="#0000FF"
+                    android:textColor="@color/colorNumb"
                     android:textSize="10pt"/>
             </LinearLayout>
             <TextView
@@ -402,15 +416,17 @@ tools:context="ru.mobileapp.FragmentEvent">
                 android:layout_marginLeft="10dp"
                 android:text="5"
                 android:background="@drawable/greeb_cirle"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="#ffffff" />
             <TextView
                 android:layout_width="40px"
                 android:layout_height="40px"
                 android:id="@+id/autoCom322"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/red_circle"
+                android:background="@drawable/yellow_circle"
                 android:gravity="center"
-                android:text="10"/>
+                android:text="10"
+                android:textColor="#ffffff" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -430,7 +446,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:id="@+id/idSPlegendNumberAuto33"
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="18dp"
-                    android:textColor="#0000FF"
+                    android:textColor="@color/colorNumb"
                     android:textSize="10pt"/>
             </LinearLayout>
             <TextView
@@ -440,15 +456,17 @@ tools:context="ru.mobileapp.FragmentEvent">
                 android:layout_marginLeft="10dp"
                 android:text="4"
                 android:background="@drawable/greeb_cirle"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:textColor="#ffffff" />
             <TextView
                 android:layout_width="40px"
                 android:layout_height="40px"
                 android:id="@+id/autoCom332"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/red_circle"
+                android:background="@drawable/yellow_circle"
                 android:gravity="center"
-                android:text="1"/>
+                android:text="1"
+                android:textColor="#ffffff" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
