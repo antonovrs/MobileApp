@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">MobileApp</string>
     <string name="activity_main">SmartTrans NaviCore</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Settings</string>
     <string name="action_settings_first">Settings</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="task_done">Выполнено</string>
+    <string name="task_create">Создано</string>
+    <string name="task_in_work">В работе</string>
+    <string name="task_not_done">Не выполнено</string>
 </resources>
