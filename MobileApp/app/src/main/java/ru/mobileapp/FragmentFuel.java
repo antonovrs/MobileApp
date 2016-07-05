@@ -6,6 +6,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+
+import org.eazegraph.lib.charts.BarChart;
+import org.eazegraph.lib.charts.StackedBarChart;
+import org.eazegraph.lib.models.BarModel;
+import org.eazegraph.lib.models.StackedBarModel;
+
+import java.util.zip.Inflater;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +32,8 @@ public class FragmentFuel extends android.app.Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private CheckBox sink;
 
     private OnFragmentInteractionListener mListener;
 
@@ -61,8 +71,20 @@ public class FragmentFuel extends android.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fuel, container, false);
+        View rootview = inflater.inflate(R.layout.fragment_fuel, container, false);
+
+        BarChart mBarChart = (BarChart) rootview.findViewById(R.id.barchart);
+
+        mBarChart.addBar(new BarModel(5.f, 0xFF1FF456));
+        mBarChart.addBar(new BarModel(1.f, 0xFF343456));
+        mBarChart.addBar(new BarModel(5.f, 0xFF1FF456));
+        mBarChart.addBar(new BarModel(4.f, 0xFF343456));
+        mBarChart.addBar(new BarModel(7.f, 0xFF1FF456));
+        mBarChart.addBar(new BarModel(0.f, 0xFF343456));
+
+        mBarChart.startAnimation();
+
+        return rootview;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -71,7 +93,6 @@ public class FragmentFuel extends android.app.Fragment {
             mListener.onFragmentInteraction(uri);
         }
     }
-
 
 
     @Override
@@ -94,4 +115,5 @@ public class FragmentFuel extends android.app.Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
 }
