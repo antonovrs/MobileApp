@@ -1,5 +1,8 @@
 package ru.mobileapp;
 
+import android.app.ActionBar;
+import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,6 +17,10 @@ import org.eazegraph.lib.models.BarModel;
 import org.eazegraph.lib.models.StackedBarModel;
 
 import java.util.zip.Inflater;
+
+import layout.FuelAll;
+import layout.FuelConsumption;
+import layout.FuelSInk;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -32,8 +39,6 @@ public class FragmentFuel extends android.app.Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
-    private CheckBox sink;
 
     private OnFragmentInteractionListener mListener;
 
@@ -71,20 +76,7 @@ public class FragmentFuel extends android.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootview = inflater.inflate(R.layout.fragment_fuel, container, false);
-
-        BarChart mBarChart = (BarChart) rootview.findViewById(R.id.barchart);
-
-        mBarChart.addBar(new BarModel(5.f, 0xFF1FF456));
-        mBarChart.addBar(new BarModel(1.f, 0xFF343456));
-        mBarChart.addBar(new BarModel(5.f, 0xFF1FF456));
-        mBarChart.addBar(new BarModel(4.f, 0xFF343456));
-        mBarChart.addBar(new BarModel(7.f, 0xFF1FF456));
-        mBarChart.addBar(new BarModel(0.f, 0xFF343456));
-
-        mBarChart.startAnimation();
-
-        return rootview;
+        return inflater.inflate(R.layout.fragment_fuel, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
