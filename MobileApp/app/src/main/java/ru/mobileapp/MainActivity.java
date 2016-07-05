@@ -14,6 +14,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.RadioButton;
+
+import layout.FuelAll;
+import layout.FuelConsumption;
+import layout.FuelSInk;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -24,6 +30,14 @@ public class MainActivity extends AppCompatActivity
     FragmentEvent fevent;
     FragmentEmployees femloyees;
     FragmentAdmin fadmin;
+
+    FuelAll fAll;
+    FuelSInk fsink;
+    FuelConsumption fConsumption;
+
+    private RadioButton sink;
+    private RadioButton consumption;
+    private RadioButton sinkconsumption;
 
 
     @Override
@@ -60,9 +74,9 @@ public class MainActivity extends AppCompatActivity
         femloyees = new FragmentEmployees();
         fadmin = new FragmentAdmin();
 
-        FragmentTransaction ftrans = getFragmentManager().beginTransaction();
-        ftrans.replace(R.id.container, fstate_park);
-        ftrans.commit();
+        fsink = new FuelSInk();
+        fAll = new FuelAll();
+        fConsumption = new FuelConsumption();
     }
 
     @Override
@@ -77,14 +91,19 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -112,14 +131,32 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.admin) {
             ftrans.replace(R.id.container, fadmin);
         } else if (id == R.id.exit) {
-            this.finish();
-
 
         }ftrans.commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void onCheckedChange (View v)
+    {
+        sink = (RadioButton) v.findViewById(R.id.sink);
+        consumption = (RadioButton) v.findViewById(R.id.consumption);
+        sinkconsumption = (RadioButton) v.findViewById(R.id.sinkconsumption);
+        FragmentTransaction fTrans = getFragmentManager().beginTransaction();
+        switch (v.getId()) {
+            case R.id.sink:
+                fTrans.replace(R.id.barchartlayout, fsink);
+                break;
+            case R.id.consumption:
+                fTrans.replace(R.id.barchartlayout, fConsumption);
+                break;
+            case R.id.sinkconsumption:
+                fTrans.replace(R.id.barchartlayout, fAll);
+                break;
+        }
+        fTrans.commit();
     }
 
 }
