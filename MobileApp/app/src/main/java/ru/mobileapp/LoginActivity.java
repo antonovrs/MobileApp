@@ -35,8 +35,10 @@ public class LoginActivity extends Activity {
 
                         password.getText().toString().equals("admin")) {
                     Toast.makeText(getApplicationContext(), "Загрузка...", Toast.LENGTH_SHORT).show();
+
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
+
                 } else {
                     Toast.makeText(getApplicationContext(), "Неверные данные", Toast.LENGTH_SHORT).show();
                 }

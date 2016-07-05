@@ -116,6 +116,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.admin) {
             ftrans.replace(R.id.container, fadmin);
         } else if (id == R.id.exit) {
+            this.finish();
+
 
         }ftrans.commit();
 
