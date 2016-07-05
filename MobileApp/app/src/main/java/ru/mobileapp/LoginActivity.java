@@ -1,6 +1,7 @@
 package ru.mobileapp;
 
 import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -38,6 +39,7 @@ public class LoginActivity extends Activity {
 
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
+                    FragmentTransaction ftrans = getFragmentManager().beginTransaction();
 
                 } else {
                     Toast.makeText(getApplicationContext(), "Неверные данные", Toast.LENGTH_SHORT).show();

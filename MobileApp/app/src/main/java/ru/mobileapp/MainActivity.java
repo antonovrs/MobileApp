@@ -60,8 +60,9 @@ public class MainActivity extends AppCompatActivity
         femloyees = new FragmentEmployees();
         fadmin = new FragmentAdmin();
 
-
-
+        FragmentTransaction ftrans = getFragmentManager().beginTransaction();
+        ftrans.replace(R.id.container, fstate_park);
+        ftrans.commit();
     }
 
     @Override
