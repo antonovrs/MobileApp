@@ -135,14 +135,14 @@ tools:context="ru.mobileapp.FragmentEvent">
         android:layout_height="0dp"
         android:layout_weight="1"
         android:minHeight="10dp"
-        android:minWidth="10dp">
+        android:minWidth="10dp"
+        android:background="@android:drawable/dialog_holo_light_frame">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
         android:scrollIndicators="right"
-        android:baselineAligned="false"
-        android:background="@android:drawable/dialog_holo_light_frame">
+        android:baselineAligned="false">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -403,7 +403,10 @@ tools:context="ru.mobileapp.FragmentEvent">
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:textAppearance="?android:attr/textAppearanceMedium"/>
-
+        <HorizontalScrollView
+            android:id="@+id/hscroll3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -541,6 +544,7 @@ tools:context="ru.mobileapp.FragmentEvent">
                 android:minHeight="10dp"
                 android:minWidth="10dp" />
         </LinearLayout>
+        </HorizontalScrollView>
     </LinearLayout>
 
 </ScrollView>
