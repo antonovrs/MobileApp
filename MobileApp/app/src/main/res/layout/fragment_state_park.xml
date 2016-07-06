@@ -15,34 +15,49 @@ tools:context="ru.mobileapp.FragmentEvent">
     android:layout_gravity="center"
     android:layout_marginTop="5dp" />
 
-<LinearLayout
-    android:id="@+id/layout1"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="0.80"
-    android:orientation="horizontal"
-    android:background="@android:drawable/dialog_holo_light_frame"
-    android:weightSum="1">
-    <org.eazegraph.lib.charts.PieChart
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/piechart"
-        android:layout_width="150dp"
-        android:layout_height="177dp"
-        android:padding="8dp"
-        app:egLegendTextSize="18sp"
-        app:egUsePieRotation="true"
-        app:egValueTextSize="36sp"
-        android:layout_below="@+id/textView6"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="20dp"
-        android:layout_weight="0.32" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="197dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:layout_weight="0.04"
+        android:paddingBottom="15dp">
 
-    <LinearLayout
-        android:layout_width="150dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Всего:  "
+            android:id="@+id/text_all"
+            android:layout_marginLeft="41dp"
+            android:layout_marginStart="41dp"
+            android:layout_alignTop="@+id/text_cout_st"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <org.eazegraph.lib.charts.PieChart
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/piechart"
+            android:layout_width="148dp"
+            android:layout_height="177dp"
+            android:padding="8dp"
+            app:egLegendTextSize="10sp"
+            app:egUsePieRotation="true"
+            app:egValueTextSize="36sp"
+            android:layout_weight="0.90"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_gravity="center_horizontal|bottom">
+        android:layout_gravity="center_horizontal|bottom"
+            android:layout_alignParentTop="true"
+            android:id="@+id/linearLayout"
+            android:layout_toRightOf="@+id/piechart"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -103,17 +118,31 @@ tools:context="ru.mobileapp.FragmentEvent">
                 android:layout_marginLeft="15dp" />
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="89"
+            android:id="@+id/text_cout_st"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/text_all"
+            android:layout_toEndOf="@+id/text_all" />
+    </RelativeLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@android:drawable/dialog_holo_light_frame">
+        android:minHeight="10dp"
+        android:minWidth="10dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:scrollIndicators="right">
+        android:scrollIndicators="right"
+        android:baselineAligned="false"
+        android:background="@android:drawable/dialog_holo_light_frame">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -122,7 +151,7 @@ tools:context="ru.mobileapp.FragmentEvent">
             android:layout_marginLeft="10dp"
             android:textAppearance="?android:attr/textAppearanceMedium"/>
         <HorizontalScrollView
-            android:id="@+id/hscroll"
+            android:id="@+id/hscroll1"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
         <LinearLayout
@@ -130,8 +159,6 @@ tools:context="ru.mobileapp.FragmentEvent">
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:weightSum="1"
-            android:nestedScrollingEnabled="false"
-            android:scrollIndicators="bottom"
             android:orientation="horizontal">
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -157,8 +184,8 @@ tools:context="ru.mobileapp.FragmentEvent">
             </LinearLayout>
 
             <TextView
-                android:layout_width="40px"
-                android:layout_height="40px"
+                android:layout_width="60px"
+                android:layout_height="60px"
                 android:id="@+id/autoCom111"
                 android:layout_marginLeft="10dp"
                 android:text="15"
@@ -167,13 +194,15 @@ tools:context="ru.mobileapp.FragmentEvent">
                 android:textColor="#ffffff" />
 
             <TextView
-                android:layout_width="40px"
-                android:layout_height="40px"
+                android:layout_width="60px"
+                android:layout_height="60px"
                 android:id="@+id/autoCom112"
                 android:layout_marginLeft="10dp"
                 android:gravity="center"
                 android:background="@drawable/yellow_circle"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:minHeight="10dp"
+                android:minWidth="10dp" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -197,32 +226,40 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:textSize="10pt"/>
             </LinearLayout>
             <TextView
-                android:layout_width="40px"
-                android:layout_height="40px"
+                android:layout_width="60px"
+                android:layout_height="60px"
                 android:id="@+id/autoCom121"
                 android:layout_marginLeft="10dp"
                 android:text="4"
                 android:background="@drawable/greeb_cirle"
                 android:gravity="center"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:minHeight="10dp"
+                android:minWidth="10dp" />
             <TextView
-                android:layout_width="40px"
-                android:layout_height="40px"
+                android:layout_width="60px"
+                android:layout_height="60px"
                 android:id="@+id/autoCom122"
                 android:layout_marginLeft="10dp"
                 android:text="1"
                 android:background="@drawable/yellow_circle"
                 android:gravity="center"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:minHeight="10dp"
+                android:minWidth="10dp" />
         </LinearLayout>
-         </HorizontalScrollView>
-    <TextView
+        </HorizontalScrollView>
+        <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Транспортная компания 2"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <HorizontalScrollView
+            android:id="@+id/hscroll2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -250,23 +287,27 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:textSize="10pt"/>
             </LinearLayout>
             <TextView
-                android:layout_width="40px"
-                android:layout_height="40px"
+                android:layout_width="60px"
+                android:layout_height="60px"
                 android:id="@+id/autoCom211"
                 android:layout_marginLeft="10dp"
                 android:text="10"
                 android:background="@drawable/greeb_cirle"
                 android:gravity="center"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:minHeight="10dp"
+                android:minWidth="10dp" />
             <TextView
-                android:layout_width="40px"
-                android:layout_height="40px"
+                android:layout_width="60px"
+                android:layout_height="60px"
                 android:id="@+id/autoCom212"
                 android:layout_marginLeft="10dp"
                 android:text="5"
                 android:background="@drawable/yellow_circle"
                 android:gravity="center"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:minHeight="10dp"
+                android:minWidth="10dp" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -290,22 +331,26 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:textSize="10pt"/>
             </LinearLayout>
             <TextView
-                android:layout_width="40px"
-                android:layout_height="40px"
+                android:layout_width="60px"
+                android:layout_height="60px"
                 android:id="@+id/autoCom221"
                 android:layout_marginLeft="10dp"
                 android:text="5"
                 android:background="@drawable/greeb_cirle"
                 android:gravity="center"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:minHeight="10dp"
+                android:minWidth="10dp" />
             <TextView
-                android:layout_width="40px"
-                android:layout_height="40px"
+                android:layout_width="60px"
+                android:layout_height="60px"
                 android:id="@+id/autoCom222"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/yellow_circle"
                 android:gravity="center"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:minHeight="10dp"
+                android:minWidth="10dp" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -329,23 +374,28 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:textSize="10pt"/>
             </LinearLayout>
             <TextView
-                android:layout_width="40px"
-                android:layout_height="40px"
+                android:layout_width="60px"
+                android:layout_height="60px"
                 android:id="@+id/autoCom231"
                 android:layout_marginLeft="10dp"
                 android:text="5"
                 android:background="@drawable/greeb_cirle"
                 android:gravity="center"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:minHeight="10dp"
+                android:minWidth="10dp" />
             <TextView
-                android:layout_width="40px"
-                android:layout_height="40px"
+                android:layout_width="60px"
+                android:layout_height="60px"
                 android:id="@+id/autoCom232"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/yellow_circle"
                 android:gravity="center"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:minHeight="10dp"
+                android:minWidth="10dp" />
         </LinearLayout>
+        </HorizontalScrollView>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -353,6 +403,7 @@ tools:context="ru.mobileapp.FragmentEvent">
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:textAppearance="?android:attr/textAppearanceMedium"/>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -380,23 +431,27 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:textSize="10pt"/>
             </LinearLayout>
             <TextView
-                android:layout_width="40px"
-                android:layout_height="40px"
+                android:layout_width="60px"
+                android:layout_height="60px"
                 android:id="@+id/autoCom311"
                 android:layout_marginLeft="10dp"
                 android:text="5"
                 android:background="@drawable/greeb_cirle"
                 android:gravity="center"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:minHeight="10dp"
+                android:minWidth="10dp" />
             <TextView
-                android:layout_width="40px"
-                android:layout_height="40px"
+                android:layout_width="60px"
+                android:layout_height="60px"
                 android:id="@+id/autoCom312"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/yellow_circle"
                 android:gravity="center"
                 android:text="10"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:minHeight="10dp"
+                android:minWidth="10dp" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -420,23 +475,27 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:textSize="10pt"/>
             </LinearLayout>
             <TextView
-                android:layout_width="40px"
-                android:layout_height="40px"
+                android:layout_width="60px"
+                android:layout_height="60px"
                 android:id="@+id/autoCom321"
                 android:layout_marginLeft="10dp"
                 android:text="5"
                 android:background="@drawable/greeb_cirle"
                 android:gravity="center"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:minHeight="10dp"
+                android:minWidth="10dp" />
             <TextView
-                android:layout_width="40px"
-                android:layout_height="40px"
+                android:layout_width="60px"
+                android:layout_height="60px"
                 android:id="@+id/autoCom322"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/yellow_circle"
                 android:gravity="center"
                 android:text="10"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:minHeight="10dp"
+                android:minWidth="10dp" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -460,24 +519,29 @@ tools:context="ru.mobileapp.FragmentEvent">
                     android:textSize="10pt"/>
             </LinearLayout>
             <TextView
-                android:layout_width="40px"
-                android:layout_height="40px"
+                android:layout_width="60px"
+                android:layout_height="60px"
                 android:id="@+id/autoCom331"
                 android:layout_marginLeft="10dp"
                 android:text="4"
                 android:background="@drawable/greeb_cirle"
                 android:gravity="center"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:minHeight="10dp"
+                android:minWidth="10dp" />
             <TextView
-                android:layout_width="40px"
-                android:layout_height="40px"
+                android:layout_width="60px"
+                android:layout_height="60px"
                 android:id="@+id/autoCom332"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/yellow_circle"
                 android:gravity="center"
                 android:text="1"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"
+                android:minHeight="10dp"
+                android:minWidth="10dp" />
         </LinearLayout>
     </LinearLayout>
+
 </ScrollView>
 </LinearLayout>

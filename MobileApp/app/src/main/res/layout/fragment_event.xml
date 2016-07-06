@@ -14,35 +14,68 @@
         android:layout_gravity="center"
         android:layout_marginTop="5dp" />
 
-    <LinearLayout
-        android:id="@+id/layout1"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@android:drawable/dialog_holo_light_frame">
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Топ-3 событий"
+        android:id="@+id/textView"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="197dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:layout_weight="0.04"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Всего:  "
+            android:id="@+id/text_all"
+            android:layout_marginLeft="41dp"
+            android:layout_marginStart="41dp"
+            android:layout_alignTop="@+id/text_cout_st"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
         <org.eazegraph.lib.charts.PieChart
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/piechart"
-            android:padding="8dp"
-            app:egLegendTextSize="12sp"
+            android:layout_width="148dp"
+            android:layout_height="177dp"
+            android:padding="0dp"
+            app:egLegendTextSize="10sp"
             app:egUsePieRotation="true"
             app:egValueTextSize="36sp"
-            android:layout_gravity="center_horizontal|bottom"
-            android:layout_width="116dp"
-            android:layout_height="176dp" />
+            android:layout_weight="0.90"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="164dp"
             android:orientation="vertical"
-            android:layout_gravity="center_horizontal|bottom">
+            android:layout_gravity="center_horizontal|bottom"
+            android:id="@+id/linearLayout2"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/piechart"
+            android:layout_toEndOf="@+id/piechart"
+            android:layout_alignTop="@+id/piechart">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <ImageView
                     android:layout_width="30px"
                     android:layout_height="30px"
-                    android:background="@drawable/greeb_cirle"
+                    android:background="@drawable/red_circle"
                     android:id="@+id/imageView3"
                     android:layout_marginTop="5dp"/>
                 <TextView
@@ -52,7 +85,8 @@
                     android:id="@+id/idElegendEvent1"
                     android:layout_marginLeft="15dp"
                     android:text="Отсутствие связи"
-                    android:layout_marginRight="15dp"/>
+                    android:layout_marginRight="15dp"
+                    android:textSize="15dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -62,7 +96,7 @@
                 <ImageView
                     android:layout_width="30px"
                     android:layout_height="30px"
-                    android:background="#56B7F1"
+                    android:background="@drawable/yellow_circle"
                     android:id="@+id/imageView2"
                     android:layout_marginTop="10dp"/>
                 <TextView
@@ -72,7 +106,8 @@
                     android:text="@string/event_out_route"
                     android:id="@+id/idElegendEvent2"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"/>
+                    android:layout_marginRight="15dp"
+                    android:textSize="15dp" />
 
             </LinearLayout>
 
@@ -83,7 +118,7 @@
                 <ImageView
                     android:layout_width="30px"
                     android:layout_height="30px"
-                    android:background="#CDA67F"
+                    android:background="@drawable/greeb_cirle"
                     android:id="@+id/imageView4"
                     android:layout_marginTop="10dp"/>
                 <TextView
@@ -93,24 +128,48 @@
                     android:text="@string/event_speed_reduction"
                     android:id="@+id/idElegendEvent3"
                     android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp" />
+                    android:layout_marginLeft="15dp"
+                    android:textSize="15dp" />
             </LinearLayout>
         </LinearLayout>
-</LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="89"
+            android:id="@+id/text_cout_st"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/text_all"
+            android:layout_toEndOf="@+id/text_all" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Топ-3 нарушителей"
+        android:id="@+id/textView4"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/piechart"
+        android:layout_toRightOf="@+id/text_all"
+        android:layout_toEndOf="@+id/text_all"
+        android:layout_gravity="center_horizontal" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/layout1"
         android:background="@android:drawable/dialog_holo_light_frame">
 
         <org.eazegraph.lib.charts.PieChart
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/piechart1"
             android:layout_width="118dp"
-            android:layout_height="249dp"
+            android:layout_height="184dp"
             android:padding="8dp"
-            app:egLegendTextSize="18sp"
+            app:egLegendTextSize="10sp"
             app:egUsePieRotation="true"
             app:egValueTextSize="36sp"
             android:layout_gravity="center_horizontal|bottom"
@@ -119,7 +178,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="178dp"
             android:orientation="vertical"
             android:layout_gravity="center_horizontal|bottom">
             <LinearLayout
@@ -149,13 +208,15 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="А 013 АА 64"
-                        android:id="@+id/idElegendObject1" />
+                        android:id="@+id/idElegendObject1"
+                        android:textSize="15dp" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Сергей Петров"
-                        android:id="@+id/idElegendObject1Name" />
+                        android:id="@+id/idElegendObject1Name"
+                        android:textSize="15dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -187,13 +248,15 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="А 012 АА 64"
-                    android:id="@+id/idElegendObject2" />
+                    android:id="@+id/idElegendObject2"
+                    android:textSize="15dp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Иван Кузнецов"
-                    android:id="@+id/idElegendObject2Name"/>
+                    android:id="@+id/idElegendObject2Name"
+                    android:textSize="15dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -225,13 +288,15 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="А 014 АА 64"
-                    android:id="@+id/idElegendObject3" />
+                    android:id="@+id/idElegendObject3"
+                    android:textSize="15dp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Олег Иванов"
-                    android:id="@+id/idElegendObject3Name" />
+                    android:id="@+id/idElegendObject3Name"
+                    android:textSize="15dp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
