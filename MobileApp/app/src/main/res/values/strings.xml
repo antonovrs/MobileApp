@@ -10,4 +10,12 @@
     <string name="task_create">Создано</string>
     <string name="task_in_work">В работе</string>
     <string name="task_not_done">Не выполнено</string>
+    <string name="authorization_loading">Загрузка...</string>
+    <string name="authorization_invalid_data">Неверные данные</string>
+    <string name="event_no_connection">Отсутствие связи</string>
+    <string name="event_out_route">Выход за пределы маршрута</string>
+    <string name="event_speed_reduction">Занижение скорости</string>
+    <string name="state_free">Свободно</string>
+    <string name="state_not_available">Занято</string>
+    <string name="state_repairs">В ремонте</string>
 </resources>

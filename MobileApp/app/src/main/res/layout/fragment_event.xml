@@ -5,7 +5,6 @@
     android:orientation="vertical"
     tools:context="ru.mobileapp.FragmentEvent">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,7 +69,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Выход за пределы маршрута"
+                    android:text="@string/event_out_route"
                     android:id="@+id/idElegendEvent2"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"/>
@@ -91,7 +90,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Занижение скорости"
+                    android:text="@string/event_speed_reduction"
                     android:id="@+id/idElegendEvent3"
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="15dp" />

@@ -1,7 +1,6 @@
 package ru.mobileapp;
 
 import android.app.Activity;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -28,14 +27,12 @@ public class LoginActivity extends Activity {
             public void onClick(View v) {
                 if (login.getText().toString().equals(LOGIN_VALUE) &&
                         password.getText().toString().equals(PASSWORD_VALUE)) {
-                    Toast.makeText(getApplicationContext(), "Загрузка...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getResources().getString(R.string.authorization_loading), Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
-                    FragmentTransaction ftrans = getFragmentManager().beginTransaction();
-
                 } else {
-                    Toast.makeText(getApplicationContext(), "Неверные данные", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getResources().getString(R.string.authorization_invalid_data), Toast.LENGTH_SHORT).show();
                 }
             }
         });
