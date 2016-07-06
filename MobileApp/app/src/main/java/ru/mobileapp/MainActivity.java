@@ -68,6 +68,8 @@ public class MainActivity extends AppCompatActivity
         FragmentTransaction ftrans = getFragmentManager().beginTransaction();
         ftrans.replace(R.id.container, fstate_park);
         ftrans.commit();
+
+
     }
 
     @Override
