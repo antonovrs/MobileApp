@@ -22,6 +22,9 @@
     <string name="title_itememploees_detail">ItemEmploees Detail</string>
     <string name="title_itememployees_list">Items</string>
     <string name="title_itememployees_detail">ItemEmployees Detail</string>
+    <string name="exit">Выход</string>
+    <string name="admin">Администрирование</string>
+
     <string-array name="employees">
         <item>Дмитрий Кравцов</item>
         <item>Алексей Любимов</item>

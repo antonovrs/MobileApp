@@ -90,8 +90,21 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         int id = item.getItemId();
-        return super.onOptionsItemSelected(item);
+
+        switch (id) {
+            case R.id.act_admin:
+                FragmentTransaction ftrans = getFragmentManager().beginTransaction();
+                ftrans.replace(R.id.container, fadmin);
+                ftrans.commit();
+                return true;
+            case R.id.exit:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -111,10 +124,6 @@ public class MainActivity extends AppCompatActivity
             ftrans.replace(R.id.container, ftask);
         } else if (id == R.id.fuel) {
             ftrans.replace(R.id.container, ffuel);
-        } else if (id == R.id.admin) {
-            ftrans.replace(R.id.container, fadmin);
-        } else if (id == R.id.exit) {
-            finish();
         }
         ftrans.commit();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

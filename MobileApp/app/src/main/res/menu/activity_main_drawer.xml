@@ -24,17 +24,5 @@
             android:title="Сотрудники" />
     </group>
 
-    <item android:title="Настройки">
-        <menu>
-            <item
-                android:id="@+id/admin"
-                android:icon="@drawable/ic_admin"
-                android:title="Администрирование" />
-            <item
-                android:id="@+id/exit"
-                android:icon="@drawable/ic_exit"
-                android:title="Выход" />
-        </menu>
-    </item>
 
 </menu>
