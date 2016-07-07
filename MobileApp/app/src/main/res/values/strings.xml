@@ -18,4 +18,22 @@
     <string name="state_free">Свободно</string>
     <string name="state_not_available">Занято</string>
     <string name="state_repairs">В ремонте</string>
+    <string name="title_itememploees_list">Items</string>
+    <string name="title_itememploees_detail">ItemEmploees Detail</string>
+    <string name="title_itememployees_list">Items</string>
+    <string name="title_itememployees_detail">ItemEmployees Detail</string>
+    <string-array name="employees">
+        <item>Дмитрий Кравцов</item>
+        <item>Алексей Любимов</item>
+        <item>Алексей Рубин</item>
+        <item>Олег Павлов</item>
+        <item>Андрей Васильев</item>
+        <item>Артем Хохлов</item>
+        <item>Иван Петров</item>
+        <item>Сергей Коваленко</item>
+        <item>Владимир Кудинов</item>
+        <item>Андрей Маринин</item>
+        <item>Юрий Костенко</item>
+        <item>Егор Малышев</item>
+    </string-array>
 </resources>
