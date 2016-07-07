@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity
     FragmentFuel ffuel;
     FragmentEvent fevent;
     FragmentEmployees femloyees;
-
     FragmentAdmin fadmin;
 
     FuelAll fAll;
@@ -45,7 +44,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Intent intent = getIntent();
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -70,6 +68,8 @@ public class MainActivity extends AppCompatActivity
         FragmentTransaction ftrans = getFragmentManager().beginTransaction();
         ftrans.replace(R.id.container, fstate_park);
         ftrans.commit();
+
+
     }
 
     @Override
@@ -91,6 +91,9 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -98,10 +101,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.employees){
-            Intent intent = new Intent(this, ItemEmployeesListActivity.class);
-            startActivity(intent);
-        }
+
         FragmentTransaction ftrans = getFragmentManager().beginTransaction();
         if (id == R.id.state_park) {
             ftrans.replace(R.id.container, fstate_park);
@@ -111,12 +111,15 @@ public class MainActivity extends AppCompatActivity
             ftrans.replace(R.id.container, ftask);
         } else if (id == R.id.fuel) {
             ftrans.replace(R.id.container, ffuel);
+        } else if (id == R.id.employees) {
+            ftrans.replace(R.id.container, femloyees);
         } else if (id == R.id.admin) {
             ftrans.replace(R.id.container, fadmin);
         } else if (id == R.id.exit) {
             finish();
         }
         ftrans.commit();
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
