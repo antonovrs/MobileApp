@@ -1,8 +1,9 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ssl.stnc.fragments.FragmentAdmin">
+    tools:context="com.example.ssl.stnc.fragments.FragmentAdmin"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -13,4 +14,83 @@
         android:text="Администрирование"
         android:id="@+id/textView2"
         android:layout_gravity="center" />
-</FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Главная вкладка"
+        android:textSize="8pt"
+        android:id="@+id/textView3"
+        android:layout_gravity="center" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/state_park_main"
+            android:text="Состояние автопарка"
+            android:checked="true"
+            android:onClick="fragmentChange"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/event_main"
+            android:text="События"
+            android:onClick="fragmentChange"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/task_main"
+            android:text="Задания"
+            android:onClick="fragmentChange"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fuel_main"
+            android:text="Топливо"
+            android:onClick="fragmentChange"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/employees_main"
+            android:text="Сотрудники"
+            android:onClick="fragmentChange"/>
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Отображаемые вкладки"
+        android:textSize="8pt"
+        android:id="@+id/textView1"
+        android:layout_gravity="center" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Состояние автопарка"
+        android:id="@+id/state_park_check"
+        android:checked="true"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="События"
+        android:id="@+id/event_check"
+        android:checked="true"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Задания"
+        android:id="@+id/task_check"
+        android:checked="true"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Топливо"
+        android:id="@+id/fuel_check"
+        android:checked="true"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сотрудники"
+        android:id="@+id/employees_check"
+        android:checked="true"/>
+</LinearLayout>
