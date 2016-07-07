@@ -71,6 +71,16 @@
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sinkconsumption"
+                android:layout_gravity="left|center_vertical"
+                android:text="Общий график"
+                android:checked="false"
+                android:onClick="onCheckedChange"/>
+
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,14 +94,6 @@
                 android:id="@+id/consumption"
                 android:layout_gravity="left|center_vertical"
                 android:text="Расход"
-                android:onClick="onCheckedChange"/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/sinkconsumption"
-                android:layout_gravity="left|center_vertical"
-                android:text="Общий график"
-                android:checked="false"
                 android:onClick="onCheckedChange"/>
         </RadioGroup>
     </LinearLayout>

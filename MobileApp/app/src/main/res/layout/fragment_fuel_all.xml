@@ -13,6 +13,6 @@
         android:padding="10dp"
         app:egFixedBarWidth="true"
         app:egBarWidth="20dp"
-        app:egLegendHeight="40dp"/>
+        app:egLegendHeight="0dp"/>
 
 </LinearLayout>
