@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.RadioButton;
 
 import ru.mobileapp.layout.FuelAll;
@@ -36,6 +37,18 @@ public class MainActivity extends AppCompatActivity
     private RadioButton sink;
     private RadioButton consumption;
     private RadioButton sinkconsumption;
+
+    private CheckBox statePark;
+    private CheckBox event;
+    private CheckBox task;
+    private CheckBox employees;
+    private CheckBox fuel;
+
+    private RadioButton stateParkMain;
+    private RadioButton eventMain;
+    private RadioButton taskMain;
+    private RadioButton employeesMain;
+    private RadioButton fuelMain;
 
 
     @Override
@@ -148,6 +161,35 @@ public class MainActivity extends AppCompatActivity
                 break;
         }
         fTrans.commit();
+    }
+
+    public void fragmentChange(View v) {
+        stateParkMain = (RadioButton) v.findViewById(R.id.state_park_main);
+        eventMain = (RadioButton) v.findViewById(R.id.event_main);
+        taskMain = (RadioButton) v.findViewById(R.id.task_main);
+        employeesMain = (RadioButton) v.findViewById(R.id.employees_main);
+        fuelMain = (RadioButton) v.findViewById(R.id.fuel_main);
+
+        FragmentTransaction ftrans = getFragmentManager().beginTransaction();
+
+        switch (v.getId()) {
+            case R.id.state_park_main:
+                ftrans.replace(R.id.container, fstate_park);
+                break;
+            case R.id.event_main:
+                ftrans.replace(R.id.container, fevent);
+                break;
+            case R.id.task_main:
+                ftrans.replace(R.id.container, ftask);
+                break;
+            case R.id.employees_main:
+                ftrans.replace(R.id.container, femloyees);
+                break;
+            case R.id.fuel_main:
+                ftrans.replace(R.id.container, ffuel);
+                break;
+        }
+        ftrans.commit();
     }
 
 }
