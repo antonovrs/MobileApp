@@ -124,10 +124,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.employees){
-            Intent intent = new Intent(this, ItemEmployeesListActivity.class);
-            startActivity(intent);
-        }
+
         FragmentTransaction ftrans = getFragmentManager().beginTransaction();
         if (id == R.id.state_park) {
             ftrans.replace(R.id.container, fstate_park);
@@ -135,7 +132,10 @@ public class MainActivity extends AppCompatActivity
             ftrans.replace(R.id.container, fevent);
         } else if (id == R.id.task) {
             ftrans.replace(R.id.container, ftask);
-        } else if (id == R.id.fuel) {
+        } else if(id == R.id.employees){
+            ftrans.replace(R.id.container, femloyees);
+        }
+        else if (id == R.id.fuel) {
             ftrans.replace(R.id.container, ffuel);
         }
         ftrans.commit();
