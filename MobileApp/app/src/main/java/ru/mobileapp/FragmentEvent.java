@@ -18,9 +18,9 @@ public class FragmentEvent extends android.app.Fragment {
                 inflater.inflate(R.layout.fragment_event, container, false);
         PieChart mPieChart = (PieChart) rootView.findViewById(R.id.piechart);
 
-        mPieChart.addPieSlice(new PieModel(getResources().getString(R.string.event_no_connection), 15, getResources().getColor(R.color.colorGreen)));
-        mPieChart.addPieSlice(new PieModel(getResources().getString(R.string.event_out_route), 25, getResources().getColor(R.color.colorYellow)));
-        mPieChart.addPieSlice(new PieModel(getResources().getString(R.string.event_speed_reduction), 35, getResources().getColor(R.color.colorRed)));
+        mPieChart.addPieSlice(new PieModel(getResources().getString(R.string.event_no_connection), 8, getResources().getColor(R.color.colorGreen)));
+        mPieChart.addPieSlice(new PieModel(getResources().getString(R.string.event_out_route), 5, getResources().getColor(R.color.colorYellow)));
+        mPieChart.addPieSlice(new PieModel(getResources().getString(R.string.event_speed_reduction), 15, getResources().getColor(R.color.colorRed)));
 
         mPieChart.startAnimation();
 
